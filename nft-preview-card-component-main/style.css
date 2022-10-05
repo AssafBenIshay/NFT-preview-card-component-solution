@@ -1,0 +1,167 @@
+/* 
+Mobile: 375px
+Desktop: 1440px
+
+Font size (paragraph): 18px
+Font
+Family: Outfit
+Weights: 300, 400, 600 
+font-family: 'Outfit', sans-serif;*/
+
+:root {
+	--colorSoftBlue: hsl(215, 51%, 70%);
+	--colorCyan: hsl(178, 100%, 50%);
+
+	--colorMainBG: hsl(217, 54%, 11%);
+	--colorCardBG: hsl(216, 50%, 16%);
+	--colorLine: hsl(215, 32%, 27%);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--colorMainBG);
+	display: flex;
+
+	justify-content: center;
+	text-align: center;
+	font-family: "Outfit", sans-serif;
+}
+
+p {
+	font-size: 18px;
+}
+
+hr {
+	border: none;
+	height: 1.4px;
+	background-color: var(--colorLine);
+	margin-bottom: 12px;
+}
+
+.container {
+	background-color: var(--colorCardBG);
+	max-width: 350px;
+
+	margin: 150px 0;
+	border-radius: 12px;
+}
+
+.image-container .main-image {
+	max-width: 100%;
+}
+.image-container {
+	margin: 25px 25px 0 25px;
+	border-radius: 7px;
+	overflow: hidden;
+}
+.eye-container {
+	display: flex;
+	position: absolute;
+	visibility: hidden;
+	z-index: 1;
+}
+.eye-container:hover {
+	visibility: visible;
+	color: var(--colorCyan);
+	background-color: var(--colorCyan);
+	cursor: pointer;
+}
+
+.eye-img {
+	z-index: 1;
+	width: 30px;
+	margin: 135px;
+}
+
+.image-container:hover .eye-container {
+	visibility: visible;
+	color: --colorCyan;
+	border-radius: 9px;
+	background-color: hsla(178, 100%, 50%, 0.507);
+}
+
+.main-image {
+	display: inherit;
+}
+
+.main-image:hover {
+	opacity: 50%;
+
+	z-index: -1;
+}
+.text {
+	margin: 24px;
+	text-align: left;
+}
+
+.header {
+	color: white;
+	font-size: 22px;
+	margin: 12px 0;
+}
+
+.paragraph {
+	color: var(--colorSoftBlue);
+	font-size: 18px;
+	line-height: 1.5;
+	font-weight: 300;
+
+	margin-bottom: 16px;
+}
+
+.current-value {
+	color: var(--colorCyan);
+	font-size: 18px;
+	font-weight: 400;
+	margin-bottom: 22px;
+
+	text-justify: distribute;
+}
+
+.time-left {
+	margin-left: 30%;
+	color: var(--colorSoftBlue);
+	font-weight: 300;
+	text-align: right;
+}
+.avatar-container {
+	max-width: 2rem;
+}
+
+.avatar {
+	max-width: 100%;
+	border: solid 1.5px white;
+	border-radius: 50%;
+}
+.creator {
+	display: grid;
+	grid-template-columns: 35px 100px 100px;
+	text-justify: distribute-all-lines;
+
+	text-align: center;
+	padding-top: 5px;
+}
+.creation {
+	padding-top: 6px;
+	color: var(--colorSoftBlue);
+	font-weight: 300;
+}
+.jules {
+	padding-top: 6px;
+	color: white;
+	font-weight: 400;
+}
+
+.jules:hover {
+	color: var(--colorCyan);
+	cursor: pointer;
+}
+.header:hover {
+	color: var(--colorCyan);
+	cursor: pointer;
+}
